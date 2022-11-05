@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Clock</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="pomodoro.css">
+  <link rel="stylesheet" href="toDo.css">
+  <!-- JS -->
+  <script src="toDo.js" defer></script>
+  <script src="pomodoro.js" defer></script>
+  <script src="background.js" defer></script>
+  <!-- FONT -->
+  <script src="https://kit.fontawesome.com/6a41d356fb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div id="clock_container">
+    
+    <div id="current_list"></div>
+
+    <div class="nav" id="top_nav">
+      <button class="btn clicked" id="pomodoroBtn">Pomodoro</button>
+      <button class="btn" id="shortBreakBtn">Short Break</button>
+      <button class="btn" id="longBreakBtn">Long Break</button>
+      <button id="toToDoList"><i class="fa-solid fa-list"></i></button>
+    </div>
+    
+
+    <div id="pomodoroTimer_wrap">
+      <div class="button"></div>
+      <div class="timer" id="pomodoroTimer">25:00</div>
+      <div class="button"></div>
+    </div>
+    
+    <div class="break_wrap" id="shortBreakTimer_wrap">
+      <div class="button"><i class="fa-solid fa-caret-up"></i></div>
+      <div class="timer" id="shortBreakTimer">05:00</div>
+      <div class="button"><i class="fa-solid fa-caret-down"></i></div>
+    </div>
+    
+    <div class="break_wrap" id="longBreakTimer_wrap">
+      <div class="button"><i class="fa-solid fa-caret-up"></i></div>
+      <div class="timer" id="longBreakTimer">15:00</div>
+      <div class="button"><i class="fa-solid fa-caret-down"></i></div>
+    </div>
+    
+    <div class="nav" id="bottom_nav">
+      <button class="btn" id="startBtn">START</button>
+      <button class="btn" id="cancelBtn">CANCEL</button>
+    </div>
+
+  </div>
+
+
+  <div id="container">
+    <div id="title">
+      <h1>TO DO LIST</h1>
+    </div>
+
+    <div id="todoTopNav">
+      <button id="saveBtn"><i class="fa-solid fa-floppy-disk"></i> SAVE</button> <!--세이브-->
+      <button id="importBtn"><i class="fa-solid fa-file-import"></i> LOAD</button> <!--불러오기-->
+      <button id="backToPomodoro"><i class="fa-solid fa-right-from-bracket"></i> BACK</button> <!-- 돌아가기 -->
+    </div>
+    
+    <div id="new_task"> <!-- 새로운 카테고리 창 만들기 화면 -->
+      <input type="text" placeholder="할 일 리스트의 카테고리를 입력하세요.">
+      <button id="addBtn">ADD</button>
+    </div>
+
+    <div id="taskadded"></div>
+  </div>
+
+
+  <div id="sub_task_container"> <!-- 실제 해야 할 목록 만들기 -->
+    <div id="current_category"></div>
+
+    <div id="sun_topnav">
+      <input type="text" placeholder="선택한 카테고리의 할 일을 입력하세요.">
+      <button id="subAddBtn">ADD</button>
+    </div>
+    
+    <div id="sub_tasks"></div>
+
+    <button id="done">DONE</button>
+  </div>
+</body>
+</html>
